@@ -1,0 +1,186 @@
+/* BASE ELEMENT STYLES */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Poppins";
+	line-height: 1.6;
+	text-align: center;
+	margin: 0;
+	font-size: 16px;
+}
+
+a {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #3a3a3a;
+	font-weight: bold;
+}
+
+ul {
+	list-style: none;
+}
+
+img {
+	margin: 0 auto;
+	max-width: 500px;
+	width: 90%;
+}
+
+/* HEADERS */
+h1 {
+	font-size: 2rem;
+	margin-bottom: 1rem;
+}
+
+h2 {
+	font-size: 1.2rem;
+}
+
+.container,
+.bottom-footer {
+	margin: 0 auto;
+	width: 90%;
+}
+
+.navi-bar {
+	margin-bottom: 3rem;
+}
+
+.top-navi {
+	padding: 0;
+}
+
+.top-navi li {
+	margin-bottom: 0.4rem;
+	font-size: 1rem;
+	padding: 0.5rem 0;
+}
+
+.profile-pic {
+	width: 60%;
+}
+
+.portfolio-flexbox {
+	margin-top: 2rem;
+}
+
+.col {
+	margin: 1rem 0;
+}
+
+.hide {
+	display: none;
+}
+
+/* LAYOUT FLEXBOX CONTAINERS */
+
+.navi-bar,
+.top-navi,
+.flex-profile,
+.portfolio-flexbox,
+.bottom-footer,
+.bottom-navi {
+	display: flex;
+}
+.navi-bar,
+.top-navi,
+.flex-profile,
+.portfolio-flexbox {
+	flex-direction: column;
+}
+
+.bottom-navi {
+	align-items: center;
+}
+
+.bottom-footer {
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+/* ============= MEDIA QUERIES ================ */
+
+/* TABLET SCREEN SIZE */
+@media (min-width: 768px) {
+	.navi-bar,
+	.bottom-navi {
+		align-items: center;
+	}
+	.top-navi {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.top-navi li {
+		flex: 1 20%;
+		margin: 0 1rem;
+	}
+
+	.flex-profile {
+		flex-direction: row-reverse;
+		margin-top: 1rem;
+	}
+
+	.flex-profile p {
+		text-align: left;
+		padding-right: 1em;
+		margin: 0;
+	}
+
+	.profile-pic {
+		width: 40%;
+	}
+
+	.portfolio-flexbox {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.col {
+		flex: 1 40%;
+		margin: 0.5rem;
+	}
+
+	img {
+		width: 100%;
+	}
+	.contact-info {
+		margin: 0 auto;
+		width: 70%;
+	}
+	.bottom-navi li {
+		margin: 0 0.5em;
+	}
+
+	.hide {
+		display: inline;
+	}
+
+	/* BOTTOM FOOTER 'BACK TO TOP' HIDDEN */
+	.bottom-navi li:first-child {
+		display: none;
+	}
+}
+
+/* BIG TABLETS TO DESKTOP */
+@media (min-width: 1024px) {
+	.navi-bar {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.main-navi {
+		margin-bottom: 0;
+	}
+	.top-navi {
+		width: 100%;
+	}
+	.top-navi li {
+		margin: 0 1rem;
+	}
+	.col {
+		flex: 1 30%;
+		margin: 0.5rem;
+	}
+}
